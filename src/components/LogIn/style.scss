@@ -1,0 +1,27 @@
+@import './../../styles/color.scss';
+
+.login {
+  background-color: $form-color;
+  border-radius: 44px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login__image {
+  display: block;
+  margin: auto;
+  width: 160px;
+  height: 150px;
+  margin-top: 77px;
+  margin-bottom: 56px;
+}
+
+.login__button {
+  margin: auto;
+  font-size: 18px;
+  font-weight: bold;
+  color: $color-second;
+  border-color: $color-second;
+  margin-bottom: 36px;
+  padding: 20px 34px;
+}
