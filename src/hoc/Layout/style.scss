@@ -1,0 +1,14 @@
+.layout {
+  max-width: 614px;
+  margin: auto;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    max-width: 325px;
+  }
+}
