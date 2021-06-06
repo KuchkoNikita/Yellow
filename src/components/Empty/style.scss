@@ -1,0 +1,27 @@
+@import '../../styles/color.scss';
+
+.empty {
+}
+
+.empty__image {
+  display: block;
+  margin: auto;
+  margin-bottom: 47px;
+}
+
+.empty__description {
+  display: block;
+  font-size: 24px;
+  color: $text-color-light;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.empty__button {
+  display: block;
+  margin: auto;
+  font-size: 18px;
+  padding: 20px 34px;
+  color: $form-color;
+  border-color: $form-color;
+}
