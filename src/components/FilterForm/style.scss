@@ -1,0 +1,22 @@
+@import '../../styles/color.scss';
+
+.filter {
+  display: flex;
+  background-color: $filter-background;
+  padding: 16px 0;
+  justify-content: center;
+}
+
+.filter__field:not(:last-child) {
+  margin-right: 45px;
+}
+
+.filter__label {
+  margin-right: 15px;
+  font-size: 13px;
+  color: $text-color-light;
+}
+
+.filter__input {
+  width: 100px;
+}
