@@ -1,0 +1,63 @@
+@import './../../styles/color.scss';
+
+.header {
+  background-color: $color-main;
+  height: 102px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 33px 26px;
+}
+
+.header__buttons {
+  display: flex;
+}
+
+.header__logo {
+  width: 147px;
+  height: 56px;
+}
+
+.header__filter-button {
+  margin-left: 56px;
+}
+
+.header__menu-button {
+  display: none;
+}
+
+.header__navigation {
+  list-style-type: none;
+}
+
+.header__link {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  color: $color-second;
+  display: inline;
+
+  &:not(:last-child) {
+    margin-right: 45px;
+  }
+}
+
+.header__link--active {
+  border-bottom: 2px solid $color-second;
+  padding-bottom: 4px;
+}
+
+@media (max-width: 768px) {
+  .header__link {
+    display: none;
+  }
+
+  .header__menu-button {
+    display: block;
+    margin-left: 45px;
+  }
+
+  .header__filter-button {
+    margin: 0;
+  }
+}
