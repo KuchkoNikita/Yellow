@@ -1,0 +1,63 @@
+@import '../../styles/color.scss';
+
+.drawer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 90;
+  background-color: white;
+  width: 100%;
+  padding: 26px 33px;
+}
+
+.drawer__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 170px;
+}
+
+.drawer__logo {
+  width: 130px;
+  height: 49px;
+
+  g {
+    fill: $color-main;
+  }
+}
+
+.drawer__cancel-button {
+  width: 28px;
+  height: 28px;
+
+  path {
+    fill: $text-color-light;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.drawer__navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.drawer__link {
+  margin: auto;
+  color: $text-color;
+  font-size: 33px;
+  text-decoration: none;
+  font-weight: bold;
+
+  &:hover {
+    color: $color-main;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 35px;
+  }
+}
