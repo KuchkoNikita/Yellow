@@ -1,0 +1,12 @@
+@import './../../styles/color.scss';
+
+.info__text {
+  color: $text-color;
+  font-size: 14px;
+}
+
+.info__title {
+  color: $color-main;
+  font-size: 36px;
+  font-weight: bold;
+}
