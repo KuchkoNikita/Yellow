@@ -1,0 +1,32 @@
+@import './../../../styles/color.scss';
+
+.card {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 78px;
+}
+
+.card__info {
+  margin-left: 45px;
+}
+
+.card__date {
+  font-size: 14px;
+  color: $text-color-light;
+}
+
+.card__info-block {
+  margin-top: 9px;
+}
+
+.card__key {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.card__value {
+  margin-left: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: $text-color-light;
+}
