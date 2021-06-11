@@ -9,6 +9,7 @@
 }
 
 .login__image {
+  fill: $color-second;
   display: block;
   margin: auto;
   width: 160px;
@@ -25,4 +26,19 @@
   border-color: $color-second;
   margin-bottom: 36px;
   padding: 20px 34px;
+}
+
+@media (max-width: 768px) {
+  .login {
+    background-color: transparent;
+  }
+
+  .login__image {
+    fill: $form-color;
+  }
+
+  .login__button {
+    color: $form-color;
+    border-color: $form-color;
+  }
 }
