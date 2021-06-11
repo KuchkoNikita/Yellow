@@ -26,3 +26,10 @@
   border-radius: 11px;
   border: solid 1px $border-color;
 }
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
+}
