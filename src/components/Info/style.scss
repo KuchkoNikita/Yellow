@@ -1,5 +1,12 @@
 @import './../../styles/color.scss';
 
+.info {
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .info__text {
   color: $text-color;
   font-size: 14px;
