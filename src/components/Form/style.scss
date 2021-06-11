@@ -9,6 +9,13 @@
   width: 500px;
 }
 
+.form-inner {
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .form__button {
   display: block;
   margin: auto;
