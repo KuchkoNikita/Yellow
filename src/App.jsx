@@ -1,29 +1,63 @@
-import React from 'react';
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
-import Card from './components/Cards/index';
-import Form from './components/Form/index';
+import React, { useEffect } from 'react';
+import { Switch, Route, Redirect } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+
+import { autoLogin } from './store/actions/auth';
+
 import Info from './components/Info/index';
+import Jogs from './components/Jogs/index';
+import Contacts from './components/Contacts/index';
 import LogIn from './components/LogIn/index';
-import Empty from './components/Empty/index';
 import Layout from './hoc/Layout';
 
-function App() {
-  const routers = (
+const App = ({ isAuthenticated, autoLogin }) => {
+  const history = useHistory();
+
+  useEffect(() => {
+    autoLogin();
+  }, []);
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      history.push('/jogs');
+    }
+  }, [isAuthenticated]);
+
+  let routers = (
     <Switch>
-      <Route path={'/empty'} component={Empty} />
-      <Route path={'/cards'} component={Card} />
-      <Route path={'/jogs'} component={Form} />
-      <Route path={'/contacts'} component={LogIn} />
-      <Route path={'/info'} exact component={Info} />
-      <Redirect to="/jogs" />
+      <Route path={'/auth'} component={LogIn} />
+      <Redirect to="/auth" />
     </Switch>
   );
 
-  return (
-    <BrowserRouter>
-      <Layout>{routers}</Layout>
-    </BrowserRouter>
-  );
-}
+  if (isAuthenticated) {
+    routers = (
+      <Switch>
+        <Route path={'/auth'} component={LogIn} />
+        <Route path={'/jogs'} component={Jogs} />
+        <Route path={'/contacts'} component={Contacts} />
+        <Route path={'/info'} exact component={Info} />
+        <Redirect to="/jogs" />
+      </Switch>
+    );
+  }
 
-export default App;
+  return <Layout isAuthenticated={isAuthenticated}>{routers}</Layout>;
+};
+
+App.propTypes = {
+  isAuthenticated: PropTypes.bool,
+  autoLogin: PropTypes.func,
+};
+
+const mapStateToProps = (state) => ({
+  isAuthenticated: !!state.auth.token,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  autoLogin: () => dispatch(autoLogin()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
