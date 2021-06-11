@@ -27,6 +27,8 @@
 }
 
 .header__navigation {
+  display: flex;
+  align-items: center;
   list-style-type: none;
 }
 
@@ -45,6 +47,21 @@
 .header__link--active {
   border-bottom: 2px solid $color-second;
   padding-bottom: 4px;
+}
+
+.header__filter-image {
+  width: 40px;
+  height: 40px;
+  padding: 6px;
+}
+
+.header__filter-image--active {
+  border-radius: 5px;
+  border: 2px solid $active-filter;
+
+  path {
+    fill: $active-filter;
+  }
 }
 
 @media (max-width: 768px) {
