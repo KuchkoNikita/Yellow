@@ -19,21 +19,15 @@
 }
 
 .drawer__logo {
+  fill: $color-main;
   width: 130px;
   height: 49px;
-
-  g {
-    fill: $color-main;
-  }
 }
 
 .drawer__cancel-button {
+  fill: $text-color-light;
   width: 28px;
   height: 28px;
-
-  path {
-    fill: $text-color-light;
-  }
 
   &:hover {
     cursor: pointer;
