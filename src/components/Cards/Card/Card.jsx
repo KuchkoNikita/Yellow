@@ -5,7 +5,7 @@ import './style.scss';
 import './../../../styles/common.scss';
 
 const Card = ({ distance, time, date, speed }) => (
-  <div className="card">
+  <div className="card" data-testid="card">
     <svg
       className="card__icon"
       xmlns="http://www.w3.org/2000/svg"
