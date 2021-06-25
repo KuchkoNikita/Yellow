@@ -15,7 +15,9 @@ const Layout = ({ children, isAuthenticated }) => {
       <Drawer isOpen={isOpenDrawer} setIsOpen={setIsOpenDrawer} />
       <Header isAuthenticated={isAuthenticated} setIsOpenDrawer={setIsOpenDrawer} />
       <Filter />
-      <div className="layout">{children}</div>
+      <div data-testid="layout" className="layout">
+        {children}
+      </div>
     </>
   );
 };
