@@ -39,7 +39,9 @@ const Cards = ({ setIsOpenForm, isOpenFilter, cards, filterStart, filterEnd }) =
           );
         })}
       </div>
-      <AddSvg onClick={handleClick} className="add-icon" />
+      <button onClick={handleClick} className="icon-button add-icon">
+        <AddSvg />
+      </button>
     </>
   );
 };
