@@ -1,6 +1,6 @@
 import { AUTH_SUCCESS, AUTH_LOGOUT } from './../actions/actionTypes';
 
-const initialState = {
+export const initialState = {
   token: null,
 };
 

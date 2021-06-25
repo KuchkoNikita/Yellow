@@ -1,6 +1,6 @@
 import { SET_FILTER_START, SET_FILTER_END, SET_TOGGLE_FORM } from './../actions/actionTypes';
 
-const initialState = {
+export const initialState = {
   filterStart: {},
   filterEnd: {},
   isOpenFilter: false,
