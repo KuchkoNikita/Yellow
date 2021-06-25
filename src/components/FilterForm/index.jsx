@@ -25,7 +25,7 @@ const Filter = ({ isOpen, actionFilterStart, actionFilterEnd }) => {
   return (
     <>
       {isOpen ? (
-        <div className="filter">
+        <div className="filter" data-testid="filter">
           <div className="filter__field">
             <span className="filter__label">Date from</span>
             <input
