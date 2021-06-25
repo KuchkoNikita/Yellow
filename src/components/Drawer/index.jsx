@@ -13,19 +13,39 @@ const Drawer = ({ isOpen, setIsOpen }) => {
   return (
     <>
       {isOpen ? (
-        <div className="drawer">
+        <div data-testid="drawer" className="drawer">
           <div className="drawer__header">
-            <LogoSvg className="drawer__logo" />
-            <CancelSvg className="drawer__cancel-button" onClick={handleClick} />
+            <LogoSvg className="drawer__logo" data-testid="logo" />
+            <button className="drawer__cancel-button icon-button" onClick={handleClick}>
+              <CancelSvg />
+            </button>
           </div>
           <nav className="drawer__navigation">
-            <NavLink className="drawer__link" to="/jogs" exact={false} onClick={handleClick}>
+            <NavLink
+              data-testid="jogs-link"
+              className="drawer__link"
+              to="/jogs"
+              exact={false}
+              onClick={handleClick}
+            >
               JOGS
             </NavLink>
-            <NavLink className="drawer__link" to="/info" exact={false} onClick={handleClick}>
+            <NavLink
+              data-testid="info-link"
+              className="drawer__link"
+              to="/info"
+              exact={false}
+              onClick={handleClick}
+            >
               INFO
             </NavLink>
-            <NavLink className="drawer__link" to="/contacts" exact={false} onClick={handleClick}>
+            <NavLink
+              data-testid="contacts-link"
+              className="drawer__link"
+              to="/contacts"
+              exact={false}
+              onClick={handleClick}
+            >
               CONTACT US
             </NavLink>
           </nav>
