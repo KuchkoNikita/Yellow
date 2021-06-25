@@ -22,6 +22,8 @@
     "build": "react-scripts build",
     "lint": "eslint --ext .ts,.tsx src --fix",
     "test": "react-scripts test",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch",
     "eject": "react-scripts eject"
   },
   "prettier": {
