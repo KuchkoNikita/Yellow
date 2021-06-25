@@ -29,24 +29,47 @@ const Form = ({ setIsOpenForm, fetchCreateJog }) => {
   return (
     <div className="inner">
       <div className="form">
-        <button className="form__close-button icon-button" onClick={handleClickClose}>
+        <button
+          data-testid="form-button"
+          className="form__close-button icon-button"
+          onClick={handleClickClose}
+        >
           <CancelSvg />
         </button>
         <div className="form__fields">
           <div className="form__field">
             <span className="form__label">Distance</span>
-            <input onChange={handleChangeDistance} className="form__input input" type="text" />
+            <input
+              data-testid="form-input"
+              onChange={handleChangeDistance}
+              className="form__input input"
+              type="text"
+            />
           </div>
           <div className="form__field">
             <span className="form__label">Time</span>
-            <input onChange={handleChangeTime} className="form__input input" type="text" />
+            <input
+              data-testid="form-input"
+              onChange={handleChangeTime}
+              className="form__input input"
+              type="text"
+            />
           </div>
           <div className="form__field">
             <span className="form__label">Date</span>
-            <input onChange={handleChangeDate} className="form__input input" type="text" />
+            <input
+              data-testid="form-input"
+              onChange={handleChangeDate}
+              className="form__input input"
+              type="text"
+            />
           </div>
         </div>
-        <button className="form__button button" onClick={handleClickSubmit}>
+        <button
+          data-testid="form-button"
+          className="form__button button"
+          onClick={handleClickSubmit}
+        >
           Save
         </button>
       </div>
