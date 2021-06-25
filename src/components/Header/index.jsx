@@ -16,8 +16,8 @@ const Header = ({ isAuthenticated, isOpenFilter, setIsOpenDrawer, actionToggleFo
   const handleDrawerClick = () => setIsOpenDrawer(true);
 
   return (
-    <div className="header">
-      <LogoSvg className="header__logo" />
+    <div className="header" data-testid="header">
+      <LogoSvg className="header__logo" data-testid="logo" />
       {isAuthenticated && (
         <div className="header__buttons">
           <nav className="header__navigation">
